@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;family=Newsreader:ital,wght@0,400;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "secondary-fixed": "#99f6c2", "tertiary-fixed": "#d9e5df", "secondary": "#006c45", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#3d4944", "on-tertiary-fixed": "#131e1a", "on-tertiary": "#ffffff", "primary-container": "#008655", "on-surface-variant": "#3d4a41", "on-primary-fixed-variant": "#005232", "surface-container": "#e5f1e8", "outline-variant": "#bccabf", "error": "#ba1a1a", "on-tertiary-container": "#f5fff9", "on-primary-container": "#f6fff6", "secondary-container": "#96f3bf", "inverse-primary": "#62dd9e", "surface-variant": "#dae5dd", "surface-bright": "#f1fcf4", "inverse-on-surface": "#e8f4eb", "surface-tint": "#006d44", "on-surface": "#141e19", "on-primary": "#ffffff", "on-secondary-fixed": "#002112", "tertiary-container": "#6b7772", "secondary-fixed-dim": "#7dd9a7", "on-primary-fixed": "#002111", "on-error": "#ffffff", "primary": "#006a42", "on-secondary": "#ffffff", "primary-fixed-dim": "#62dd9e", "surface-container-high": "#dfebe3", "error-container": "#ffdad6", "surface-container-highest": "#dae5dd", "outline": "#6d7a70", "surface": "#f1fcf4", "tertiary": "#535f59", "surface-container-low": "#ebf6ee", "primary-fixed": "#80fab9", "on-secondary-container": "#007149", "background": "#f1fcf4", "on-background": "#141e19", "on-secondary-fixed-variant": "#005233", "inverse-surface": "#28332d", "tertiary-fixed-dim": "#bdc9c3", "surface-dim": "#d1ddd5" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin": "3rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem" }, "fontFamily": { "editorial-accent": ["Newsreader"], "headline-sm": ["Manrope"], "display-hero": ["Manrope"], "label-sm": ["Inter"], "headline-lg-mobile": ["Manrope"], "body-lg": ["Inter"], "code-badge": ["JetBrains Mono"], "body-sm": ["Inter"], "headline-lg": ["Manrope"], "body-md": ["Inter"], "display-hero-mobile": ["Manrope"], "label-md": ["Inter"], "headline-md": ["Manrope"] }, "fontSize": { "editorial-accent": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30"><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin h-20 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><img alt="Marketplace Kinetic Monogram" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxsVziqkflvRE1jU40YMGm43DNoM48KUv3yI_ZDNnTKQ0pGl1DYcsIOapdvHs3YV21FojYZjomhWXMsZO-4_JbkuMjBMVffcce9uhqseF1MEd_BtBvkND-99GF3VFRygBQu3U3cZWiRr9kBzxACCylhmfUSxckqOZSrYuuVeeLeGuPShkhPxUE7vHP_fdPOHaxBjkHHecG3ieRtKaLooq46A2QmZnKRwuB54eioAKB2BjAsSc9NR1EUw"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">KINETIQ</span></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container text-on-surface font-semibold"><a aria-current="page" class="px-space-sm py-space-xs rounded-lg transition-all duration-150 bg-surface-container text-on-surface font-semibold" data-path="explore" href="#">Explore</a><a class="px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all duration-150" data-path="categories" href="#">Categories</a><a class="px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all duration-150" data-path="find-freelancers" href="#">Find Freelancers</a><a class="px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all duration-150" data-path="how-it-works" href="#">How it Works</a><a class="px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all duration-150" data-path="enterprise" href="#">Enterprise</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="hidden sm:inline-flex items-center px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all duration-150" data-path="become-freelancer" href="#">Become a Freelancer</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-xs py-space-xs transition-colors duration-150" data-path="sign-in" href="#">Sign In</a><a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-sm rounded-lg hover:bg-primary-container transition-transform duration-150 ease-out hover:-translate-y-0.5 shadow-sm" data-path="join-marketplace" href="#">Join Marketplace</a><div class="pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnjKySUGxnltlh4l6ol7Tf217ObvE2krQ7MNkcQ5uWpeS-GlGN-jpmZQhMUIp0xholPlZtwSOkVFpyBGj0dDFpA7z7GnLuw0UCCQu7s3g6r9Fk5woPULh5Lyj2lGmw9uxn_-Q0uEFaM6x7-rCQisTkva28a3H-lGA9_oU5gJKP5UJSPzLoBmBB-0xEIcmIV9U5KhYmZVmKBC3EKEnysOZswYF1nP-hhXU7kWsubmUO8T4CATznaJPHZw"/></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- SECTION 1: CINEMATIC HERO (Light #FFFFFF background) -->
+<section class="relative w-full bg-surface-container-lowest overflow-hidden py-16 lg:py-24">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Column: Search & Value Proposition -->
+<div class="lg:col-span-7 flex flex-col gap-6 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container w-fit">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-code-badge text-code-badge text-primary uppercase tracking-wider">Vetted Directory • Q1 2025 Roster</span>
+</div>
+<h1 class="font-display-hero text-display-hero tracking-tight text-on-surface">
+            Great work starts with the <span class="font-editorial-accent text-editorial-accent italic text-primary">right people</span>.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Discover top-tier vetted talent, compare transparent deliverables, and launch high-impact projects with verified escrow protection.
+          </p>
+<!-- Luxury Search Bar Shell -->
+<div class="mt-2 bg-surface-container-lowest p-2 rounded-xl shadow-xl flex flex-col md:flex-row items-stretch md:items-center gap-2">
+<div class="flex items-center gap-2 px-3 py-2 border-b md:border-b-0 md:border-r border-outline-variant/30 flex-1">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="What service are you looking for?" type="text"/>
+</div>
+<div class="flex items-center gap-2 px-3 py-2">
+<span class="material-symbols-outlined text-outline">tune</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface-variant focus:outline-none cursor-pointer pr-4">
+<option>All Specializations</option>
+<option>Interface &amp; Product</option>
+<option>AI Automation &amp; ML</option>
+<option>Identity &amp; Brand Craft</option>
+<option>Cinema &amp; 3D Motion</option>
+</select>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3.5 rounded-lg hover:bg-primary-container transition-transform duration-150 ease-out hover:-translate-y-0.5 flex items-center justify-center gap-2 shrink-0">
+<span>Find Talent</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Popular Search Tags -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<span class="font-code-badge text-code-badge text-outline uppercase tracking-wider mr-1">Trending:</span>
+<button class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors">Website development</button>
+<button class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors">Brand identity &amp; logo</button>
+<button class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors">AI &amp; automation workflows</button>
+<button class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors">Cinematic video editing</button>
+</div>
+<!-- Dual CTAs & Micro-Proof -->
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary-container transition-all shadow-sm" href="#services-grid">Explore Services</a>
+<a class="bg-surface-container text-on-surface font-label-md text-label-md px-6 py-3 rounded-full hover:bg-surface-container-high transition-all" href="#specialist-onboarding">Offer Your Skills</a>
+<div class="flex items-center gap-3 pl-2 sm:pl-4 border-l border-outline-variant/40">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Portrait photo of senior creative director in minimalist studio setting, soft neutral rim lighting, emerald tone badge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDot-j5-imd4_enza1oQ3SGdcpSQLUbsAbtPH4ZR6egB1pmVD39Zpizzru4B1iPPn-39v2CC4uJC8i66W7zUsi-nty0u0oxt4uGWu4ydeO2epm5WJgwEiI-nU5JeYqLQbVruiq3WEa4nUrX6vnP_oiWSXL9of8UdU6BFYBZXrxHdinzAJAP2XXk72txpD7-XduK0mQ5CsclFowrrGnvivW4QFndMusJ8Hj5XV7mzJJTKOAeCk6uTks-pQ"/>
+<img class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Portrait photo of female lead machine learning engineer with glasses, clean architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK-1r-IQQzJpfyXeQ1BwecosrMhvYt-3_aNjVXOc_r3hIAdq_o_zxMcj_4Q02ZA857gZkOmxwZqcqfzjTTVR_QacKPG12dqy82x_hJ14llDv6aoMLc-gRzu6yf1uEMSzBqcRGGOxrJ0HgKvsyhZA9bun4ZAO6Qg_6OcqpSkLNfGEvjN3myYiX-6dgC-moK6IHQzhWD35fXdievo0AE-7p3YxiBd2d5BbNoWGu9qVqAbMJA-WPVn1YAfQ"/>
+<img class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Portrait of senior 3D motion designer with ambient emerald studio backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK1DKOSqBulgdN9vphfxRbLOLk6u9AO_NQ27GgbhwFoXp34Wz8JXp1PxcCDniDTYO-6Tr99D2ifa9oooOkEQefkPhQ0F9zB0Q7XBO9LlB4HszAav3mYbGTPTTDn_OIXyXkQnL3ixGPCerkQZZfN_o6YR9BWn-a7RJ1LBCYS_LtoMcnYR8AwSciYfKaBpxLcMu2M3_zbcyqGwmUJYFfmiRsXTbxM0Z4TzX2tYJl2Hxk6L0w_lG7ZQhI9g"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Top 3% Vetted</span>
+<span class="font-code-badge text-[10px] text-outline">Verified escrows</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Geometric Graphic & Kinetic Polyhedron -->
+<div class="lg:col-span-5 relative flex items-center justify-center">
+<div class="relative w-full max-w-[480px] aspect-square rounded-2xl bg-gradient-to-tr from-surface-container-low via-surface-container to-surface p-6 shadow-xl overflow-hidden flex flex-col justify-between">
+<!-- Monospace coordinate readouts -->
+<div class="flex items-center justify-between z-10">
+<span class="font-code-badge text-code-badge text-primary uppercase">HEX_NODE_INDEX // 084</span>
+<span class="font-code-badge text-code-badge text-outline">LATENCY: 12ms</span>
+</div>
+<!-- Geometric SVG Polyhedron with ambient animation -->
+<div class="relative w-full h-full flex items-center justify-center">
+<svg class="w-72 h-72 animate-[spin_60s_linear_infinite]" viewbox="0 0 320 320">
+<defs>
+<lineargradient id="facetA" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#006a42" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#002111" stop-opacity="0.95"></stop>
+</lineargradient>
+<lineargradient id="facetB" x1="0%" x2="100%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#16a36a" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#006a42" stop-opacity="0.85"></stop>
+</lineargradient>
+<lineargradient id="facetC" x1="100%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#80fab9" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#006c45" stop-opacity="0.75"></stop>
+</lineargradient>
+</defs>
+<!-- Outer Hexagon Orbit -->
+<polygon fill="none" points="160,20 281,90 281,230 160,300 39,230 39,90" stroke="#bccabf" stroke-dasharray="4 4" stroke-width="1.5"></polygon>
+<!-- Inner Facets matching kinetic polyhedron emblem -->
+<polygon fill="url(#facetB)" points="160,40 264,100 160,160"></polygon>
+<polygon fill="url(#facetA)" points="264,100 264,220 160,160"></polygon>
+<polygon fill="url(#facetC)" points="264,220 160,280 160,160"></polygon>
+<polygon fill="url(#facetA)" points="160,280 56,220 160,160"></polygon>
+<polygon fill="url(#facetB)" points="56,220 56,100 160,160"></polygon>
+<polygon fill="url(#facetC)" points="56,100 160,40 160,160"></polygon>
+<!-- Nodes -->
+<circle cx="160" cy="40" fill="#006a42" r="4"></circle>
+<circle cx="264" cy="100" fill="#006a42" r="4"></circle>
+<circle cx="264" cy="220" fill="#006a42" r="4"></circle>
+<circle cx="160" cy="280" fill="#006a42" r="4"></circle>
+<circle cx="56" cy="220" fill="#006a42" r="4"></circle>
+<circle cx="56" cy="100" fill="#006a42" r="4"></circle>
+<circle cx="160" cy="160" fill="#80fab9" r="5"></circle>
+</svg>
+<!-- Floating Micro-Card Overlays -->
+<div class="absolute -bottom-2 -left-2 bg-surface-container-lowest/90 backdrop-blur-md p-3.5 rounded-xl shadow-lg flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface">Escrow Lock</p>
+<p class="font-code-badge text-[10px] text-outline">$12,450.00 IN TRANSIT</p>
+</div>
+</div>
+<div class="absolute -top-3 -right-3 bg-inverse-surface text-inverse-on-surface p-3.5 rounded-xl shadow-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed text-sm">verified_user</span>
+<div>
+<p class="font-label-sm text-label-sm text-inverse-on-surface">Identity Authenticated</p>
+<p class="font-code-badge text-[10px] text-primary-fixed-dim">KYC VERIFIED TIER-1</p>
+</div>
+</div>
+</div>
+<!-- Bottom Data Rail -->
+<div class="flex items-center justify-between z-10 pt-2 border-t border-outline-variant/30">
+<span class="font-code-badge text-code-badge text-on-surface-variant">4,812 PROS ACTIVE</span>
+<span class="font-code-badge text-code-badge text-primary font-semibold">99.4% FULFILLMENT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: DARK CINEMATIC STATEMENT SECTION (Deep #0E1512 background) -->
+<section class="relative w-full bg-inverse-surface text-inverse-on-surface py-24 overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex flex-col items-center text-center">
+<!-- Monospace Badge -->
+<span class="font-code-badge text-code-badge tracking-widest text-primary-fixed px-3 py-1 rounded bg-surface-container/10 uppercase">
+        [ WHY KINETIQ ]
+      </span>
+<!-- Massive Centered Statement -->
+<h2 class="font-headline-lg text-headline-lg md:text-[52px] md:leading-[60px] tracking-tight text-surface-bright max-w-4xl mt-6">
+        Not a template. A marketplace built on <span class="font-editorial-accent text-editorial-accent md:text-[56px] italic text-primary-fixed">real talent</span>.
+      </h2>
+<p class="font-body-lg text-body-lg text-outline-variant max-w-2xl mt-4">
+        We replaced volume bidding with artisanal precision. Every commission moves through strict milestones, verified repositories, and clear proof-of-work checkpoints.
+      </p>
+<!-- 3-Column Scannable Benefit Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-16 text-left">
+<div class="bg-surface-container-highest/10 p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container-highest/20 transition-all">
+<div>
+<span class="font-code-badge text-code-badge text-primary-fixed">01 // CURATION</span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright mt-4">Curated Vetting</h3>
+<p class="font-body-md text-body-md text-outline-variant mt-2">
+              Only the top 3% of global specialists across product design, distributed systems, and generative AI pipelines make it past portfolio review.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-highest/20 flex items-center justify-between text-outline-variant font-code-badge text-code-badge">
+<span>ACCEPTANCE RATE</span>
+<span class="text-primary-fixed font-bold">2.8%</span>
+</div>
+</div>
+<div class="bg-surface-container-highest/10 p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container-highest/20 transition-all">
+<div>
+<span class="font-code-badge text-code-badge text-primary-fixed">02 // PROTECTION</span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright mt-4">Scope &amp; Milestone Escrow</h3>
+<p class="font-body-md text-body-md text-outline-variant mt-2">
+              Capital releases only upon approval of designated version artifacts. Clients pay for completed outcomes; creators hold guaranteed payment safety.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-highest/20 flex items-center justify-between text-outline-variant font-code-badge text-code-badge">
+<span>DISPUTE OCCURRENCE</span>
+<span class="text-primary-fixed font-bold">&lt; 0.05%</span>
+</div>
+</div>
+<div class="bg-surface-container-highest/10 p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container-highest/20 transition-all">
+<div>
+<span class="font-code-badge text-code-badge text-primary-fixed">03 // DIRECT SYNC</span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright mt-4">Direct Collaboration</h3>
+<p class="font-body-md text-body-md text-outline-variant mt-2">
+              Zero intermediary agencies or account manager overhead. Direct video huddles, async Figma inspections, and direct branch PR code reviews.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-highest/20 flex items-center justify-between text-outline-variant font-code-badge text-code-badge">
+<span>AVG RESPONSE TIME</span>
+<span class="text-primary-fixed font-bold">14 MINS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: SIGNATURE PINNED CATEGORY SHOWCASE (Deep #0E1512 background continued) -->
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-20">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Left 40%: Category Navigation -->
+<div class="lg:col-span-5 flex flex-col">
+<span class="font-code-badge text-code-badge tracking-widest text-primary-fixed uppercase">[ CATEGORIES ]</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-surface-bright mt-3">
+            Ten ways to bring your project to <span class="font-editorial-accent text-editorial-accent italic text-primary-fixed">life</span>.
+          </h2>
+<div class="flex flex-col gap-1.5 mt-8" id="category-nav-list">
+<button class="category-tab active-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all bg-surface-container-highest/25 text-surface-bright font-headline-sm text-headline-sm" data-category="0">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-primary rounded-full"></span>
+<span class="font-code-badge text-code-badge text-primary-fixed">01</span>
+<span>Graphics &amp; Design</span>
+</span>
+<span class="material-symbols-outlined text-primary-fixed text-lg">arrow_forward</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="1">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">02</span>
+<span>Programming &amp; Development</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="2">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">03</span>
+<span>Digital Marketing</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="3">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">04</span>
+<span>Video &amp; Animation</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="4">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">05</span>
+<span>Writing &amp; Translation</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="5">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">06</span>
+<span>AI &amp; Automation</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="6">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">07</span>
+<span>Business Services</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="7">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">08</span>
+<span>Photography</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="8">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">09</span>
+<span>Music &amp; Audio</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+<button class="category-tab text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-highest/15 text-outline-variant font-headline-sm text-headline-sm" data-category="9">
+<span class="flex items-center gap-3">
+<span class="w-1.5 h-6 bg-transparent rounded-full"></span>
+<span class="font-code-badge text-code-badge text-outline">10</span>
+<span>Data &amp; Analytics</span>
+</span>
+<span class="material-symbols-outlined text-outline text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Right 60%: Interactive Preview Card -->
+<div class="lg:col-span-7 sticky top-28">
+<div class="bg-surface-container-highest/15 p-8 rounded-2xl flex flex-col gap-6 shadow-2xl relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-badge text-code-badge text-primary-fixed uppercase tracking-wider">SPOTLIGHT ARCHIVE // 01</span>
+<span class="px-3 py-1 rounded-full bg-primary/20 text-primary-fixed font-code-badge text-code-badge">1,240 PRACTITIONERS</span>
+</div>
+<!-- Visual Representation -->
+<div class="relative w-full h-80 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High luxury graphic design layout showcase featuring tactile printed brand books, dark emerald packaging, bespoke serif typography specimens and stationery mockup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLfIBJkxwBSdtGHtW-b7FyVzV7oxGAy_UDxoqzbmIxapdkEmnKZkdsvbjihG8aQw9_d3bWGUd7pGumfrI9R9VGPX6i8vX7TWaqRey9v2CqwuskMfNKWWEbPHUhek3Fczo2c7I0oiGAu9Z7V3VpmKUYxTzQVm_utpLnohp-kVzofkdKh4M34f6HIe2cDUpvtT7p2HPuD9UiuapxL0NUsWrMwffVvpVnp5vbIzRsusjRp4ntwHpvXdks4w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-surface-bright">Graphics &amp; Brand Systems</span>
+<span class="font-code-badge text-code-badge px-2.5 py-1 rounded bg-inverse-surface/80 text-primary-fixed">DELIVERY FROM 48H</span>
+</div>
+</div>
+<!-- Tags & Detailed Scope -->
+<div>
+<p class="font-body-md text-body-md text-outline-variant leading-relaxed">
+                From high-concept visual identity design systems to kinetic 3D brand guidelines and packaging architecture. Commission seasoned art directors who have led design studios and global identity rollouts.
+              </p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 rounded-md bg-surface-container-highest/25 font-code-badge text-code-badge text-surface-bright">[ BRAND IDENTITY ]</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-highest/25 font-code-badge text-code-badge text-surface-bright">[ DESIGN SYSTEMS ]</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-highest/25 font-code-badge text-code-badge text-surface-bright">[ 3D ART &amp; MOTION ]</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-highest/25 font-code-badge text-code-badge text-surface-bright">[ TYPOGRAPHY CRAFT ]</span>
+</div>
+</div>
+<!-- Action Link -->
+<div class="flex items-center justify-between pt-4 border-t border-surface-container-highest/20">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-outline-variant">Avg. Engagement:</span>
+<span class="font-code-badge text-code-badge text-surface-bright font-bold">$2,800 USD</span>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary-fixed hover:text-primary-fixed-dim transition-colors" href="#services-grid">
+<span>Browse Graphics Roster</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: EDITORIAL TRANSITION STATEMENT -->
+<section class="w-full bg-surface-container-low py-16">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin text-center">
+<p class="font-headline-md text-headline-md md:text-[32px] md:leading-[40px] tracking-tight text-on-surface max-w-3xl mx-auto">
+        Every project moves differently. We help you find the <span class="font-editorial-accent text-editorial-accent italic text-primary">one that fits</span>.
+      </p>
+</div>
+</section>
+<!-- SECTION 5: BROWSE BY PROJECT GOAL (Light #F7F9F8 background) -->
+<section class="w-full bg-surface py-20">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<span class="font-code-badge text-code-badge text-primary uppercase">[ PROJECT ACCELERATORS ]</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-on-surface mt-2">Start with what you want to achieve.</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Curated pipelines organized around outcomes, not fragmented freelance task lists.</p>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Goal Row 1 -->
+<a class="group bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4" href="#services-grid">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Launch a modern digital product &amp; web app</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full-stack React, Next.js architecture, robust design token infrastructure.</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6">
+<span class="font-code-badge text-code-badge text-primary px-3 py-1 rounded bg-secondary-container/40">[ 420 SPECIALISTS AVAILABLE ]</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</a>
+<!-- Goal Row 2 -->
+<a class="group bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4" href="#services-grid">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Build a high-conversion e-commerce brand</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Custom headless Shopify, conversion rate engineering, bespoke packaging.</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6">
+<span class="font-code-badge text-code-badge text-primary px-3 py-1 rounded bg-secondary-container/40">[ 310 SPECIALISTS AVAILABLE ]</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</a>
+<!-- Goal Row 3 -->
+<a class="group bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4" href="#services-grid">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">neurology</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Automate marketing &amp; AI operational pipelines</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">LLM workflow agents, data ingestion pipelines, automated multi-channel reporting.</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6">
+<span class="font-code-badge text-code-badge text-primary px-3 py-1 rounded bg-secondary-container/40">[ 185 SPECIALISTS AVAILABLE ]</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</a>
+<!-- Goal Row 4 -->
+<a class="group bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4" href="#services-grid">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">movie_filter</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Craft award-winning 3D motion &amp; brand film</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cinematic product unveils, Unreal Engine real-time renders, sound scoring.</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6">
+<span class="font-code-badge text-code-badge text-primary px-3 py-1 rounded bg-secondary-container/40">[ 260 SPECIALISTS AVAILABLE ]</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 6: HORIZONTAL STORY: HOW IT WORKS (Light #FFFFFF background) -->
+<section class="w-full bg-surface-container-lowest py-20">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-code-badge text-code-badge text-primary uppercase tracking-wider">[ ESCROW &amp; EXECUTION ]</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-on-surface mt-2">From first search to finished project.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Clear governance at every phase so both clients and talent build with high conviction.</p>
+</div>
+<!-- 5-Step Horizontal Grid with Lineage -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between h-full">
+<div>
+<span class="font-code-badge text-code-badge text-primary font-bold">01 // DISCOVER</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-4">Discover</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Intelligent matching or direct directory exploration. Zero noise.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[16px]">travel_explore</span>
+<span class="font-code-badge text-[11px]">AI Search Index</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between h-full">
+<div>
+<span class="font-code-badge text-code-badge text-primary font-bold">02 // COMPARE</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-4">Compare</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Inspect real deliverables, past repo metrics, and transparent scope packages.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[16px]">analytics</span>
+<span class="font-code-badge text-[11px]">Milestone Cards</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between h-full">
+<div>
+<span class="font-code-badge text-code-badge text-primary font-bold">03 // COLLABORATE</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-4">Collaborate</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Direct encrypted workspace. Lock funds safely into milestone vaults.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-code-badge text-[11px]">Protected Escrow</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between h-full">
+<div>
+<span class="font-code-badge text-code-badge text-primary font-bold">04 // DELIVER</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-4">Deliver</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Inspect production artifacts, prototype staging, and revisions in real-time.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[16px]">deployed_code</span>
+<span class="font-code-badge text-[11px]">Versioned Releases</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between h-full">
+<div>
+<span class="font-code-badge text-code-badge text-primary font-bold">05 // REVIEW</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-4">Review</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Escrow disbursement triggers automatically upon milestone signoff.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-code-badge text-[11px]">Instant Payout</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: FEATURED SERVICES (Curated Marketplace Grid) -->
+<section class="w-full bg-surface py-20" id="services-grid">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<!-- Grid Header & Category Filter Tabs -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+<div>
+<span class="font-code-badge text-code-badge text-primary uppercase">[ VERIFIED DELIVERABLES ]</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-on-surface mt-2">Discover work worth investing in.</h2>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md">All Services</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">Web Design</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">AI Workflows</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">Brand Architecture</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">Video &amp; 3D</button>
+</div>
+</div>
+<!-- 4 Rich Marketplace Service Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High-end dark mode SaaS dashboard design preview on curved ultra-wide monitor, refined typography, subtle emerald charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQGwMlrvq_aDrew9qDL8GtrQJvEv5xjCMao5OL5OzqERi54V-KKTgzb_1FngMyV4Kx5FXryqluTbKyLKPFFpj3xSF5BMLZl0pVlkNPJDlUe2tkSMQzrAX788EK32Gs5vKbj23Bgu-ZXtjaipKMHd8Wq7CU-30yZ7__RFGrRrkPt_jdsAxy7rzD26QMPOuGSOuW92j6j-QwYtpadiqv9VE9R0N8C0poPO4YokH_O4G1ByvPs1niSnPBog"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-outline hover:text-error transition-colors" onclick="this.classList.toggle('text-error')">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 px-2.5 py-0.5 rounded bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-code-badge text-[11px]">3-DAY TURNAROUND</span>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-code-badge text-code-badge text-primary uppercase">PRODUCT DESIGN</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.98 <span class="text-outline font-normal">(142)</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2 group-hover:text-primary transition-colors line-clamp-2">
+                Enterprise Design System &amp; Web App UX Audit
+              </h3>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Close up portrait of a senior Swiss product designer with sharp spectacles in clean studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUgDw6Z9Ydwd0aEu_aVaKSE3kxMA3rxjS4Qy3pOwsepunJ__VR94QBOGv_4DgAwe6Pvb8lMC7lcUqNbysXLIA-myRkyGj3NecvX70bMnaXWcQk2v1EIiFz2zmhqyA_YLE_AwADR0eSvxtbfO7847PPEbuChDhzkDO94qqKJj8dJBjO3bdNo2Tdd4Qh9iZok9XkpacYNXdCgqsugDqnhMIupnV_QovkADJLH6f4MCUHuHPayKdYk7Yurg"/>
+<span class="font-label-sm text-label-sm text-on-surface">Elena Rostova</span>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-[11px] text-outline block">Starting from</span>
+<span class="font-code-badge text-code-badge text-on-surface font-bold">$1,250</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Technical schematic diagram of autonomous multi-agent AI framework with emerald node networks and data pipelines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfoNubScjvgYj01Vu91kNjmiIPCr3-GNnQYVPAvrLl1PfTq9v3N-_xtp8AWa05afl0QpaU7AS2AcQhxxmerVrjCeP7udiagL1kmasPd52EzMdolMV4jJo3yjAxUode8TBqD-SVuQ2wVBDRqrGhMFxsW8J3Q8yzCE9bqo4SNo9ZpIKBOpSNOpbBhZid5DtNN9ESyhaRFAYh7g6qRXmaOadseyPApmVI6VZ_XkTMHSSX0tixyZat0OFh9Q"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-outline hover:text-error transition-colors" onclick="this.classList.toggle('text-error')">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 px-2.5 py-0.5 rounded bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-code-badge text-[11px]">5-DAY DELIVERY</span>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-code-badge text-code-badge text-primary uppercase">AI &amp; AGENTS</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                  5.00 <span class="text-outline font-normal">(89)</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2 group-hover:text-primary transition-colors line-clamp-2">
+                Custom LLM Multi-Agent System &amp; Retrieval Workflows
+              </h3>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of an AI systems architect in a minimalist Scandinavian office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8elvRvnW0W7KM-Gg4Nmla8M-TjOVTG31d_LT6B2GSoikR9uClcAQfXOCg3BKhlSVYHBoiG2AYiKyuGfmGvugpVgi5vb7dXzXo96mt2P8hT7RxZ9MuZ4EXn5gE88LR-wBaT2o6ikqI6IWMZCmklp5bGVtoJ93leCB2LMAgDaS1mVenwFzhWGy8Td3IRA_ez7H2J7VlCsN3QmvFmSoF8ENygNtBFDWqqUMMd5VE22ld_msS593CQGazCQ"/>
+<span class="font-label-sm text-label-sm text-on-surface">Marcus Vance</span>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-[11px] text-outline block">Starting from</span>
+<span class="font-code-badge text-code-badge text-on-surface font-bold">$2,800</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Monochrome luxury identity stationery showcase with emerald foil emboss and custom modern typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoL3KqLgi7PWzs2KIP2li_N_6dFwotJgJB1f6djHh82V1w_iNNnJTuqr0UlUTh7Aosu_wRbHn8TS8H1LeDx9YJKIX2_qIls7F2sizato7uwT1UYeQIXq7xOOf4w2BUdAkwTXsY_4HZ0KDrXnHyeBJs9JrNOGi00ctmbubnw6mGiSbyQTgMvYNCsk57wep-emfH5o4KFkSlQryxoN5299i0KKbiydDx84n6NtsScfMAEgT9k0prmQ78Jg"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-outline hover:text-error transition-colors" onclick="this.classList.toggle('text-error')">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 px-2.5 py-0.5 rounded bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-code-badge text-[11px]">7-DAY DELIVERY</span>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-code-badge text-code-badge text-primary uppercase">IDENTITY CRAFT</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.95 <span class="text-outline font-normal">(210)</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2 group-hover:text-primary transition-colors line-clamp-2">
+                Full Strategic Brand Identity with Custom Variable Font
+              </h3>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Creative woman art director with sleek minimal aesthetic and architectural earrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfjsj1D-sS30-NRfBX9LPLStDGwKWXSuq2xugHiuV7cCTsvhWOTopdN9ohFVAC2cuTIN12A4jZYoRO_EjEfOhQzY2whxZ6RmLPqMIciorDqRS82G7YcvkAtYMHsj67Y_4XGcRbyX72efmO7CIFrhXkAQh8Uy8xwSkBcmL6itYfNKcwqnIsRU4RLuMfOCI_vX-cw6B14U2agTsj5hOvysOxh_34T6rbAPDF-OeIRDCLFi120j6Rh4DWHw"/>
+<span class="font-label-sm text-label-sm text-on-surface">Soren K.</span>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-[11px] text-outline block">Starting from</span>
+<span class="font-code-badge text-code-badge text-on-surface font-bold">$3,400</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Hyper-realistic 3D product render of an iridescent mechanical chronograph watch floating in zero gravity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhBUEumQeIAyA4nleHjJTq8VmwZO44wyz-AML5CW2PuzAMXBRYnkAk5lKie6QVWaV33wuoS6gxRbKfgQgfpU8uld48rhk6UMZtlDgGvaRhVw1mNeuA3zFxQeobYjNHw6-lCQYxp9MF6B7a4oIEbbf7nPel2B7QXvVJpix5Fpfj5qBJ7bxq6XmLC5FHhJd95ZCQhrrIn2vRgENU5YDad_5v3H8KBSTnzLPVHv5sRCRF_tVvQVCT-b1DpQ"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-outline hover:text-error transition-colors" onclick="this.classList.toggle('text-error')">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 px-2.5 py-0.5 rounded bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-code-badge text-[11px]">4-DAY DELIVERY</span>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-code-badge text-code-badge text-primary uppercase">3D &amp; CINEMA</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.99 <span class="text-outline font-normal">(95)</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2 group-hover:text-primary transition-colors line-clamp-2">
+                4K Photorealistic Product Teaser &amp; Kinetic Motion Reel
+              </h3>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of senior 3D lighting artist in dark studio setup with green ambient backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAifmgim14AjwgoVkMgEo9nREzDWnesdZ53lOGOyqnjXR_sBfJ3W9li1Pdm_F_Wtfzch16nnAckgypuzMQQQqU8LNhLPyA_K30uJUncUCncdYb07tmUXehGAoIuKwSiTGH7wIcCLcePnkmpLeQHlaxkwjKtWCEi46IomafyrZc4O05y6MDTRn1vRCVMbMhfizNrUW65ThfFStz3H6whFBdoPFQb65VV8dxICFPlfhy8EDtE--DwSX_T4w"/>
+<span class="font-label-sm text-label-sm text-on-surface">Koa Chen</span>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-[11px] text-outline block">Starting from</span>
+<span class="font-code-badge text-code-badge text-on-surface font-bold">$2,100</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: FEATURED VETTED FREELANCERS -->
+<section class="w-full bg-surface-container-lowest py-20">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<span class="font-code-badge text-code-badge text-primary uppercase">[ PRACTITIONER ROSTER ]</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-on-surface mt-2">Vetted specialists ready for deployment.</h2>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-primary-container transition-colors" href="#">
+<span>Explore All 4,800+ Creators</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Practitioner Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Freelancer 1 -->
+<div class="bg-surface p-6 rounded-xl flex flex-col justify-between hover:bg-surface-container-low transition-all">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Warm studio headshot of a Principal Brand Architect in dark charcoal turtleneck, neutral green backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoUQS9puHPC2J1H1TFkqo5edgJeL5qywOSNcODf527ktDFLiGJ1nUUWesci5XWJcnvliSKRD_B7MsW5ctcQMu6JfWOF43MxNBsRl4YR62ZNF4XvrTTRLRqidGroBVHRuAcc1gi-OJpdittbN7X8jp_nO3ro_UVO3mX_qJcVFFhSO5-FzqAd6keDeS-tDpQ6knVdB3pIp65P8dGrOtWGYM7q2a6i_bVdz5GpVAPsdkbZ-h3_kmyRgRI6g"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-secondary ring-2 ring-surface"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Astrid Lindholm</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Principal Brand Architect</p>
+</div>
+</div>
+<span class="font-code-badge text-code-badge text-primary px-2.5 py-1 rounded bg-secondary-container/30">TOP 1%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-4">
+              Ex-Pentagram collaborator. Specializes in luxury design systems, bespoke typography, and physical-to-digital rebrands.
+            </p>
+<!-- Mini Portfolio Chips -->
+<div class="grid grid-cols-3 gap-2 mt-4">
+<img class="w-full h-16 rounded object-cover" data-alt="Editorial book design spread featuring minimal serif typesetting and textured paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO-8mcrjDiheW2FKAbOChpb8nKoGCBkXTcaw8iwfM_4NEp4vY097F5A5aJHbaIDzpJSCvJnfAOYUysicSn5KvvixG6QsScyvPz3riTt80FxI0HpJ5NSoFJn2vDjQ2HdcLKnnx_iWX6OIzBJECV8vvoAwGcRN0cVby8dk9cH7gTYKXwWwwEz5otZzPU7oyUIMGaD57iT0JFEScnEvoO0jAIJNuq5PPjXV4kfjISOznqOwZlMsVKIBsQPA"/>
+<img class="w-full h-16 rounded object-cover" data-alt="Glass perfume bottle brand identity packaging mock in high-contrast shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7u-7ZORRCLNCu6n2tXZ9NgOAIqG7PPOTsWT7TEUn98-q9dSHLGvPPa6sraK3SCGyRztVVBGVjhrHmii0hq5erniOePDxgnLPS-iYo-ofrFB9cvzVjD2vr2IfTwNmuWT4gXkzpGIaI_hBZ-oZd4TJ0Ts4Se8p3LW-fRPEdnSwYXfAT1wEgjEC5za7O0HpakVjKA2UKuB267v-a_i0zoxvSZMTNGk0iaFf_XfcfUcLN61H6G_eEjhh61w"/>
+<img class="w-full h-16 rounded object-cover" data-alt="Architectural logo marks grid on raw concrete surface mockup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9pu4hkZ6ngOq0hHt_xJp-65GoAfWHE7Bfn6MVnMa-Utd6XmOquu66BccyV8T_bPymZD4F7mNMs2zvxvAhGmtMN3GfMzcGsPdT-PBkJvqC-myOmqGmjGdp_foQize8fmA_O4ApsghgId8Y3mG_zuVifgGpPEe-JSoIPL7DKC1dOJJJDOimFmWRdY0kKZHt6-5RleVWrBbuKELGHDD0VEeyJDgQNIlN5-UNkl1zY6nFPAQ9T1n3wDDD2Q"/>
+</div>
+</div>
+<div class="pt-4 mt-6 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-body-sm text-[11px] text-outline block">Retainer &amp; Rates</span>
+<span class="font-code-badge text-code-badge text-on-surface font-bold">$160 / hr</span>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg transition-colors">
+              View Profile
+            </button>
+</div>
+</div>
+<!-- Freelancer 2 -->
+<div class="bg-surface p-6 rounded-xl flex flex-col justify-between hover:bg-surface-container-low transition-all">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Portrait photo of a male Senior Full-Stack AI Engineer looking at multi-monitor setup with emerald code terminal reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuG4EpFKMpQ2Gfd9vbfQiU6DW0Ld0Mqdh4zSw5CwQ2FJla2WV7ZWUeheP-HHaAvKpIv1qGGixX6-Wjuf54ewFSWAecOZzRXqXFZTeAK6Sn9Q5cCYEsoL87eUCBtO4z-LJn2L0R4CwyxxpNg1TXYRcyRFVheYK1hmcCpcsYxzGTwGw5QZcpyjPtLpkDocIweygTKgiBA-xsh6oa8NwMT2ifg2hD9ZlEsL7toqRJblJbOqScbbdixrP7DA"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-secondary ring-2 ring-surface"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tariq Al-Mansoor</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Senior Full-Stack AI Engineer</p>
+</div>
+</div>
+<span class="font-code-badge text-code-badge text-primary px-2.5 py-1 rounded bg-secondary-container/30">TOP 1%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-4">
+              Building low-latency Python/Rust backend agents, LangChain integrations, and custom vector search infrastructure.
+            </p>
+<!-- Mini Portfolio Chips -->
+<div class="grid grid-cols-3 gap-2 mt-4">
+<img class="w-full h-16 rounded object-cover" data-alt="Terminal user interface with streaming synthetic generative code logs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDUeblhva1LqgoxSLF5d2Oi3bXC0xD_0SW3Vfcw1r153Pmd_LmrOOHTUCkN07feijMd272TcNLt9d_ptxOjUN1N924VpdehKn1MUF04hZkvSREI-6z7H91PQQmSNpQiYp_-fm1XbR2PbVeEtXnNmH4d0SEEomKaIZYFkqXP7Z5cp4Z1mKwoYoO-v1P9BMNgaOyINCV7SSx-bwyF84mypzol2ehQzcAvaGvN-PPKSbpWZzcVplzbp1atA"/>
+<img class="w-full h-16 rounded object-cover" data-alt="Vector embedding cluster visualizer with glowing emerald nodes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYOqZbH_XRmAuu2M1AiQUU9DYwUxya6iaAR2VXmMStt7HKcAZc3oSdv6XgmdNwPG-6e-VP5opqAYBcakLzjp-O43yZxigqoOshHL82QNNfJadTnU3vGhXfik9C7HCVh3ff95bkejNV58hvMd8fDcNCKqyuqf-T6RuJaLaU49zUhbCWPyCKBOPzXdQNJGAUt6ttZYUWirAK8yk_geWkdtH0pAkQLqB0BfrGJdMV2mIIEc3_vRbd8rx5Mg"/>
+<img class="w-full h-16 rounded object-cover" data-alt="Architecture diagram of high throughput API gateway microservices" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMPrAooDbUT0gla_TManjVSZoylBjuswZjZzRd_-hkVUADF_s-FUWNrUlOqLpNnhVi8rJv58u39iYPBceCmMlUPXDb9ybmJIOf59pk1nUC3U4db-E9WicmgW__OKhIFg4CdtVEG-hp74fEI_I-4qoZkEDsBq7hFHrX5qSRQFg9n7SPspgHx-wKmfkH1rEw_kyCIzH0jcMqH7OwCeYCrGKVvJ7WjGCLvC2jhuOUKzERnvfQBaElXBUdWg"/>
+</div>
+</div>
+<div class="pt-4 mt-6 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-body-sm text-[11px] text-outline block">Retainer &amp; Rates</span>
+<span class="font-code-badge text-code-badge text-on-surface font-bold">$195 / hr</span>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg transition-colors">
+              View Profile
+            </button>
+</div>
+</div>
+<!-- Freelancer 3 -->
+<div class="bg-surface p-6 rounded-xl flex flex-col justify-between hover:bg-surface-container-low transition-all">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Artistic portrait of a Lead Cinema 4D Motion Director holding camera lens with moody cinematic emerald lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyTvzmRjwfCThTCb7Xd9cK-OtQc49tcJ6ObRuKx9b7EOrTzqqrRWZhGSJsdSKj64CZlXaa1aDbkpwQ8i7jvJyitLAU0kogZ2uPxMdM4in3RkauMyMFVdoV6kdejv8gX272pLnRdrbiH1XcKYVfUI-y0xBkPNyH86watPO3pGeVC0L0AxTmTUE3G-inWH4pmcDfibeztgBlBNPU3Ju5DggIm07-DEnM_rlKmMBCssXovPa0R0OARcKw0w"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-secondary ring-2 ring-surface"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Maya S. Devlin</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lead 3D &amp; Creative Technologist</p>
+</div>
+</div>
+<span class="font-code-badge text-code-badge text-primary px-2.5 py-1 rounded bg-secondary-container/30">TOP 2%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-4">
+              Creates surreal CGI commercial campaigns and WebGL interactive shaders. Previous clients include Nike, Polestar, and Bang &amp; Olufsen.
+            </p>
+<!-- Mini Portfolio Chips -->
+<div class="grid grid-cols-3 gap-2 mt-4">
+<img class="w-full h-16 rounded object-cover" data-alt="Fluid metallic chrome cloth simulation rendering in soft green atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc8Rk5SwaaK5Rqc-29SSeC9ynJz9zAOLlj9iRG9JnkDPLAQgY_nr9d-TFfIGKe_PpBhXQfmAuJUFCJdU3i6bI1Y1yZRY2my376M_nrYdAs9YLODVMsLq0B54rhGrNY7MfC25EmOtWZCpvuzx8hE6bOoYl1_kgpV73FnpmdkCHMamZyuA9KweVPa8hO02veYHrBgRoTAxCCgox_UWpUSjQSRTqGcLGThpI8WMqgjZ6-B8JgrPh16V8kBw"/>
+<img class="w-full h-16 rounded object-cover" data-alt="Abstract translucent glass prism breaking daylight into caustic rainbows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2B0WxbhDRyp5h6OmY_9GDq0OJy_ZEbB8aUFZEPJ3-HYv1TlnAFbIKjAdUY8xdA5YRruVRebZLEd5efQGrbSVj-5o5KJVOqRIx8_I26XpmikpgUaf0CjLxtuJ1O_1vHn1uApnpY52G6aPGDrzB37AQHA0JcMJQ3bpLaoAgt75MPjIRoc8qcobkeqKEqOzRMZulxOm5R3IgkOC09-BnB9XkT2sjnLt78a9EY4uURaBpOSRAq_-GyK0n8Q"/>
+<img class="w-full h-16 rounded object-cover" data-alt="Futuristic architectural interior with kinetic light installation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr086BFiW80ATVadYErHHVSvwgTRcSMSnr0nhsgmG11_0Jv3ZyoPlUllhIsVyCgORQWOlwOnUqqBhp2j3c6ELaqQHHpshqZWwNXQ8K6Tu26a9waDUo4HlJu0-rs59EX7JBMI5HL6vvVsUbC7q8_L8REo4uq6W3UwWMECOzIoYfEpynF4U27QMQWR2F4U1LCQXuMf1zYCWfPIwm44JKmeW6TAvjIKE5vNRUG1tI7ywBTfikTlYds2EPNg"/>
+</div>
+</div>
+<div class="pt-4 mt-6 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-body-sm text-[11px] text-outline block">Retainer &amp; Rates</span>
+<span class="font-code-badge text-code-badge text-on-surface font-bold">$175 / hr</span>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg transition-colors">
+              View Profile
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: THREE WAYS INTO THE MARKETPLACE -->
+<section class="w-full bg-surface-container-low py-20" id="specialist-onboarding">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="text-center max-w-xl mx-auto mb-14">
+<span class="font-code-badge text-code-badge text-primary uppercase">[ FLEXIBLE PARTICIPATION ]</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-on-surface mt-2">Three ways into the marketplace.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Engineered to support single specialized projects through to dedicated enterprise squads.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined">person_search</span>
+</div>
+<span class="font-code-badge text-code-badge text-outline">FOR INDIVIDUAL COMMISSION</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2">Hire a Specialist</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Find the exact skills for your immediate project milestone. Review curated portfolios, agree on fixed escrow scopes, and launch within 24 hours.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/30">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-primary-container" href="#services-grid">
+<span>Commission an Artisan</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<span class="font-code-badge text-code-badge text-outline">FOR MASTER CREATORS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2">Offer Your Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Showcase your craft to international brands, set your bespoke deliverables, and work without bidding wars or bottom-feeding fee structures.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/30">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-primary-container" href="#">
+<span>Apply for Roster Admission</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="font-code-badge text-code-badge text-outline">FOR ENTERPRISE &amp; LABS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2">Build a Dedicated Team</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Assemble a multi-disciplinary squad managed under a single Master Services Agreement (MSA) with unified milestone escrow billing.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/30">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-primary-container" href="#">
+<span>Talk with Concierge</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10: CINEMATIC CLOSING CTA (Dark #0E1512 background) -->
+<section class="relative w-full bg-inverse-surface text-inverse-on-surface py-28 overflow-hidden">
+<!-- Ambient particle mesh background -->
+<div class="absolute inset-0 opacity-15 pointer-events-none">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="48" id="grid-pattern" patternunits="userSpaceOnUse" width="48">
+<circle cx="2" cy="2" fill="#80fab9" r="1"></circle>
+</pattern>
+</defs>
+<rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin relative z-10 text-center flex flex-col items-center">
+<!-- Glowing brand mark -->
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest/20 flex items-center justify-center p-3 mb-6 shadow-2xl">
+<svg class="w-full h-full" viewbox="0 0 100 100">
+<polygon fill="none" points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" stroke="#62dd9e" stroke-width="6"></polygon>
+<polygon fill="#006a42" fill-opacity="0.6" points="50,15 80,32 80,68 50,85 20,68 20,32" stroke="#80fab9" stroke-width="2"></polygon>
+<circle cx="50" cy="50" fill="#80fab9" r="8"></circle>
+</svg>
+</div>
+<span class="font-code-badge text-code-badge tracking-widest text-primary-fixed uppercase">[ BEGIN COLLABORATION ]</span>
+<h2 class="font-display-hero text-display-hero tracking-tight text-surface-bright max-w-3xl mt-4">
+        Your next great project starts <span class="font-editorial-accent text-editorial-accent italic text-primary-fixed">here</span>.
+      </h2>
+<p class="font-body-lg text-body-lg text-outline-variant max-w-xl mt-4">
+        Join leading product teams, seed-stage founders, and iconic brands commissioning work across the KINETIQ network.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-4 mt-10">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-primary-container transition-transform duration-150 ease-out hover:-translate-y-0.5 shadow-lg flex items-center gap-2" href="#services-grid">
+<span>Find High-Impact Talent</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="bg-surface-container-highest/20 text-surface-bright font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-surface-container-highest/35 transition-colors" href="#specialist-onboarding">
+          Join as a Specialist
+        </a>
+</div>
+<!-- Trust Badges -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-12 border-t border-surface-container-highest/20 w-full max-w-4xl text-left">
+<div>
+<span class="font-code-badge text-code-badge text-primary-fixed">ESCROW SECURE</span>
+<p class="font-body-sm text-body-sm text-outline-variant mt-1">Multi-signature vault release</p>
+</div>
+<div>
+<span class="font-code-badge text-code-badge text-primary-fixed">IP OWNERSHIP</span>
+<p class="font-body-sm text-body-sm text-outline-variant mt-1">Full commercial rights transfer</p>
+</div>
+<div>
+<span class="font-code-badge text-code-badge text-primary-fixed">TRANSPARENT FEES</span>
+<p class="font-body-sm text-body-sm text-outline-variant mt-1">Zero hidden client surcharges</p>
+</div>
+<div>
+<span class="font-code-badge text-code-badge text-primary-fixed">ENTERPRISE SLA</span>
+<p class="font-body-sm text-body-sm text-outline-variant mt-1">Guaranteed milestone delivery</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple interactive tab switcher for Section 3 categories
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.category-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-surface-container-highest/25', 'text-surface-bright');
+          t.classList.add('text-outline-variant');
+          const indicator = t.querySelector('span > span:first-child');
+          if (indicator) indicator.classList.replace('bg-primary', 'bg-transparent');
+          const arrow = t.querySelector('.material-symbols-outlined');
+          if (arrow) {
+            arrow.textContent = 'chevron_right';
+            arrow.classList.replace('text-primary-fixed', 'text-outline');
+          }
+        });
+        tab.classList.add('bg-surface-container-highest/25', 'text-surface-bright');
+        tab.classList.remove('text-outline-variant');
+        const activeIndicator = tab.querySelector('span > span:first-child');
+        if (activeIndicator) activeIndicator.classList.replace('bg-transparent', 'bg-primary');
+        const activeArrow = tab.querySelector('.material-symbols-outlined');
+        if (activeArrow) {
+          activeArrow.textContent = 'arrow_forward';
+          activeArrow.classList.replace('text-outline', 'text-primary-fixed');
+        }
+      });
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30"><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-lg pb-space-xl border-b border-outline-variant/20"><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Explore</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Design &amp; Creative</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Development</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Brand Strategy</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Motion &amp; 3D</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Curated Studios</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">For Clients</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Direct Commission</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Enterprise Teams</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Escrow Guarantee</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Curated Rosters</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Case Studies</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">For Freelancers</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Artisan Admission</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Global Contracts</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Direct Payouts</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Creator Guild</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Masterclasses</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Company</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">About Kinetiq</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Press &amp; Media</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Editorial Journal</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Careers</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Sustainability</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Help Center</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Knowledge Base</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Trust &amp; Safety</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Dispute Policy</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Contact Concierge</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">API Documentation</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Legal</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Terms of Service</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Privacy Policy</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Intellectual Property</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Cookie Settings</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Compliance</li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface border border-outline-variant/30"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-code-badge text-code-badge text-on-surface">SYSTEM OPERATIONAL • 99.98%</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 KINETIQ Marketplaces Inc. All rights reserved.</span></div><div class="flex items-center gap-space-md"><span class="font-code-badge text-code-badge text-outline">UTC+00 LONDON / GLOBAL DIRECTORY</span></div></div></div></footer></body></html>

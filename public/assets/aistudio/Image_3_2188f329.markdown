@@ -1,0 +1,234 @@
+---
+name: Cinematic Editorial Marketplace
+colors:
+  surface: '#f1fcf4'
+  surface-dim: '#d1ddd5'
+  surface-bright: '#f1fcf4'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#ebf6ee'
+  surface-container: '#e5f1e8'
+  surface-container-high: '#dfebe3'
+  surface-container-highest: '#dae5dd'
+  on-surface: '#141e19'
+  on-surface-variant: '#3d4a41'
+  inverse-surface: '#28332d'
+  inverse-on-surface: '#e8f4eb'
+  outline: '#6d7a70'
+  outline-variant: '#bccabf'
+  surface-tint: '#006d44'
+  primary: '#006a42'
+  on-primary: '#ffffff'
+  primary-container: '#008655'
+  on-primary-container: '#f6fff6'
+  inverse-primary: '#62dd9e'
+  secondary: '#006c45'
+  on-secondary: '#ffffff'
+  secondary-container: '#96f3bf'
+  on-secondary-container: '#007149'
+  tertiary: '#535f59'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#6b7772'
+  on-tertiary-container: '#f5fff9'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#80fab9'
+  primary-fixed-dim: '#62dd9e'
+  on-primary-fixed: '#002111'
+  on-primary-fixed-variant: '#005232'
+  secondary-fixed: '#99f6c2'
+  secondary-fixed-dim: '#7dd9a7'
+  on-secondary-fixed: '#002112'
+  on-secondary-fixed-variant: '#005233'
+  tertiary-fixed: '#d9e5df'
+  tertiary-fixed-dim: '#bdc9c3'
+  on-tertiary-fixed: '#131e1a'
+  on-tertiary-fixed-variant: '#3d4944'
+  background: '#f1fcf4'
+  on-background: '#141e19'
+  surface-variant: '#dae5dd'
+typography:
+  display-hero:
+    fontFamily: Manrope
+    fontSize: 56px
+    fontWeight: '700'
+    lineHeight: 64px
+    letterSpacing: -0.03em
+  display-hero-mobile:
+    fontFamily: Manrope
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 42px
+    letterSpacing: -0.025em
+  headline-lg:
+    fontFamily: Manrope
+    fontSize: 40px
+    fontWeight: '600'
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  headline-lg-mobile:
+    fontFamily: Manrope
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 36px
+    letterSpacing: -0.015em
+  headline-md:
+    fontFamily: Manrope
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.015em
+  headline-sm:
+    fontFamily: Manrope
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  editorial-accent:
+    fontFamily: Newsreader
+    fontSize: 28px
+    fontWeight: '400'
+    lineHeight: 36px
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  body-md:
+    fontFamily: Inter
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: -0.005em
+  body-sm:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0em
+  code-badge:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+  label-md:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '600'
+    lineHeight: 18px
+    letterSpacing: 0.01em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 3rem
+  margin-mobile: 1.25rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system pairs the transaction efficiency and modular scan-ability of a tier-one services marketplace with the visual weight, restraint, and deliberate cadence of an international design biannual or cinematic publication. It speaks directly to top-tier creative talent, design directors, enterprise brand builders, and specialized digital artisans who feel alienated by mass-market, commoditized freelance portals.
+
+### Design Movements & Tone
+- **Editorial Precision:** Typographic tension achieved through disciplined contrast—combining structured grotesque hierarchy with expressive, literary serif flourishes.
+- **Cinematic Chiaroscuro:** Deliberate transitions between bright, luminous curation canvases (`#FFFFFF` / `#F7F9F8`) and deep, immersive viewport showcases (`#0E1512`). The dark sections frame talent portfolios and masterclasses like projected film cells.
+- **Micro-Structured Layouts:** Information architecture uses disciplined hairline borders, monospace metadata callouts, and spacious card compositions to eliminate transactional clutter.
+
+## Colors
+
+The palette balances vivid botanical vitality with architectural dark grounds and quiet, high-legibility neutrals.
+
+### Surface Roles & Application
+- **Brand Green Core:** `#16A36A` serves as the primary actionable anchor for conversion paths, verified badges, and active focal points. Hover states transition downward into deep green (`#117A50`).
+- **Dark Ground Canvas:** `#0E1512` forms the cinematic presentation mode, hero discovery bands, and full-bleed reel takeovers. Elevated elements within this environment reside on `#15201A` with perimeter delineation via `#29372F`.
+- **Light Ground Canvas:** `#FFFFFF` anchors active utility layers, order flows, checkout matrices, and detail pages. `#F7F9F8` acts as an offset canvas for modular grouping, while `#EAF7F0` provides tinted brand recognition for active tabs, status chips, and promotional accents.
+- **Contrast Ratios & Typography Tokens:** Text values are locked to specific canvas realities. Light contexts use `#18221D` (primary) and `#66736B` (secondary metadata). Dark contexts rely on `#F5F8F6` (primary) and `#B0BDB5` (muted attributes).
+- **Semantics:** Status indicators use purposeful, non-distracting saturation: Success (`#15803D`), Warning (`#D97706`), Error (`#DC2626`), and Info (`#2563EB`).
+
+## Typography
+
+The type system blends structural geometric forms with tactile editorial styling.
+
+### Typographic Hierarchies
+- **Structural Display (`Manrope`):** Delivers clean geometry for section headings, service category indices, and commercial titles. Tight tracking gives headlines a confident, architectural posture.
+- **Workhorse Body & System Labels (`Inter`):** Selected for high data density, micro-attribute legibility, forms, and analytical tables.
+- **Literary Expression (`Newsreader` / Editorial Italic):** Used sparingly to emphasize key conceptual phrases within hero narrative titles, curated staff picks, and testimonial spotlights (e.g., _"Exceptional direction"_, _"Curated world-class talent"_). Always styled in italic.
+- **Technical Precision (`JetBrains Mono`):** Dedicated to production delivery metrics, turnaround days (`03 DAYS`), rating counts, monetary denominations (`$1,850.00`), and protocol tags.
+
+## Layout & Spacing
+
+The layout is built upon an 8pt spatial grid configured across a 12-column responsive layout engine.
+
+### Grid & Breakpoints
+- **Desktop (1280px+):** 12 columns, maximum bounded container width of 1440px, outer margin of `margin` (`3rem`), and standard gutter of `gutter` (`1.5rem`).
+- **Tablet (768px – 1279px):** 8 columns, gutter of `1.25rem`, outer canvas margins of `2rem`.
+- **Mobile (< 768px):** 4 columns, gutter of `gutter-mobile` (`1rem`), and margins of `margin-mobile` (`1.25rem`).
+
+### Rhythm & Alignment
+Service grids strictly adopt a 4-column span (3 cards per desktop row) for hero packages, shifting to 3-column spans (4 cards per row) for directory browsing. Section padding alternates rhythmically: editorial introductions carry generous spacing (`space-xl` multiplied for hero bands), while marketplace listing grids tighten their item gaps with `space-md` to maintain scannability.
+
+## Elevation & Depth
+
+Elevation eschews heavily layered, fuzzy dropshadows in favor of razor-sharp surface contrast, tinted ambient glows, and disciplined structural borders.
+
+### Depth Paradigms
+- **Hairline Framing:** Surface separation relies primarily on single-pixel solid borders: `#E3E9E5` on light surfaces and `#29372F` across dark cinematic containers.
+- **Ambient Floor Shadows:** When floating elements demand physical separation (such as sticky search filters, modal checkout sheets, and active talent previews), use a dual-layer, green-tinted ambient drop:
+  - `0 1px 2px rgba(24, 34, 29, 0.04), 0 12px 28px -4px rgba(17, 122, 80, 0.06)` for light interfaces.
+  - `0 1px 2px rgba(0, 0, 0, 0.4), 0 16px 36px -8px rgba(0, 0, 0, 0.6)` for dark overlays.
+- **Cinematic Translucency:** Floating top navigation and filter pills leverage background blurs (`backdrop-filter: blur(16px)`) over 85% alpha surfaces (`rgba(255, 255, 255, 0.88)` on light; `rgba(14, 21, 18, 0.85)` on dark).
+
+## Shapes
+
+The design system embraces an architectural, slightly softened corner profile (`roundedness: 1`). 
+
+### Geometry Rules
+- **Base Components (`0.25rem`):** Applied to form text inputs, micro badges, and checkbox frames, ensuring functional precision.
+- **Service Cards & Drawers (`0.5rem` / `rounded-lg`):** Delivers a crisp, modern gallery card silhouette without entering playful or casual aesthetics.
+- **Media Previews & Modals (`0.75rem` / `rounded-xl`):** Video showreels, lightbox containers, and cinematic talent covers utilize structured framing that matches editorial magazine margins.
+- **Search Capsules & Quick Filters:** Feature an exception to the base radius, leveraging explicit full pills (`rounded-full`) to distinctly signify immediate interactive status against rectangular media cards.
+
+## Components
+
+### Buttons
+- **Primary CTA:** Background `#16A36A`, text `#FFFFFF`, radius `0.25rem`. On hover: `#117A50` with an eased translate transition (`translate-y(-0.5px)`). Typography set to `label-md`.
+- **Cinematic Inverted:** Used in dark sections. Background `#F5F8F6`, text `#0E1512`. Hover initiates subtle brand green tinting `#EAF7F0`.
+- **Secondary Outlined:** 1px hairline border (`#E3E9E5` on light, `#29372F` on dark), background transparent, text inherits foreground contrast.
+
+### Service & Gig Cards
+- **Architecture:** 16:10 aspect ratio media cover pinned to the top, accompanied by author avatar overlap. Body features category eyebrow in `code-badge`, headline in `headline-sm`, delivery duration, starting fee anchored right in monospace notation (`JetBrains Mono`, bold).
+- **Surface States:** On `#FFFFFF` in light mode, surrounded by a 1px `#E3E9E5` border. On hover, apply a zero-offset outline accent (`#16A36A`) with a subtle image zoom (`scale(1.02)` within overflow mask).
+
+### Chips & Filter Tags
+- **Default State:** Background `#F7F9F8`, border 1px `#E3E9E5`, text `#66736B`, typography `label-sm`.
+- **Selected State:** Background `#EAF7F0`, border 1px `#16A36A`, text `#117A50`, accompanied by a minimal check indicator.
+
+### Input Fields & Search Bars
+- **Cinematic Global Search:** Large input shell (`56px` height) with `#FFFFFF` background, border 1px `#E3E9E5`, inner placeholder styled in `#66736B`. Focus switches the outline to a crisp 1.5px `#16A36A` ring with zero spatial blur. Monospace shortcut prompt (`⌘K`) anchored at the trailing end.
+
+### Checkboxes & Radios
+- Box size `18px x 18px`, border 1.5px `#66736B`, radius `2px` for checkboxes, circular for radios. Checked state fills with `#16A36A` displaying a sharp `#FFFFFF` check mark icon.
+
+### Talent Portfolio Rail (Additional Component)
+- Full-bleed media carousel specifically engineered for the `#0E1512` cinematic surface. Cards sit on `#15201A` with `#29372F` borders. Embedded video showreels auto-loop on hover with mute controls, displaying audio frequency badges in `code-badge` styling.

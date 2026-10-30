@@ -1,0 +1,6 @@
+{
+  "name": "KINETIQ - Cinematic Editorial Marketplace",
+  "description": "Curated freelance talent marketplace with verified escrow protection, transparent milestone deliverables, and world-class digital artisans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

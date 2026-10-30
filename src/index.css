@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f1fcf4;
+  --color-surface-dim: #d1ddd5;
+  --color-surface-bright: #f1fcf4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #ebf6ee;
+  --color-surface-container: #e5f1e8;
+  --color-surface-container-high: #dfebe3;
+  --color-surface-container-highest: #dae5dd;
+  --color-on-surface: #141e19;
+  --color-on-surface-variant: #3d4a41;
+  --color-inverse-surface: #28332d;
+  --color-inverse-on-surface: #e8f4eb;
+  --color-outline: #6d7a70;
+  --color-outline-variant: #bccabf;
+  --color-surface-tint: #006d44;
+  --color-primary: #006a42;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #008655;
+  --color-on-primary-container: #f6fff6;
+  --color-inverse-primary: #62dd9e;
+  --color-secondary: #006c45;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #96f3bf;
+  --color-on-secondary-container: #007149;
+  --color-tertiary: #535f59;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #6b7772;
+  --color-on-tertiary-container: #f5fff9;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #80fab9;
+  --color-primary-fixed-dim: #62dd9e;
+  --color-on-primary-fixed: #002111;
+  --color-on-primary-fixed-variant: #005232;
+  --color-secondary-fixed: #99f6c2;
+  --color-secondary-fixed-dim: #7dd9a7;
+  --color-on-secondary-fixed: #002112;
+  --color-on-secondary-fixed-variant: #005233;
+  --color-tertiary-fixed: #d9e5df;
+  --color-tertiary-fixed-dim: #bdc9c3;
+  --color-on-tertiary-fixed: #131e1a;
+  --color-on-tertiary-fixed-variant: #3d4944;
+  --color-background: #f1fcf4;
+  --color-on-background: #141e19;
+  --color-surface-variant: #dae5dd;
+
+  --font-editorial-accent: 'Newsreader', Georgia, serif;
+  --font-headline-sm: 'Manrope', sans-serif;
+  --font-headline-md: 'Manrope', sans-serif;
+  --font-headline-lg: 'Manrope', sans-serif;
+  --font-display-hero: 'Manrope', sans-serif;
+  --font-body-sm: 'Inter', sans-serif;
+  --font-body-md: 'Inter', sans-serif;
+  --font-body-lg: 'Inter', sans-serif;
+  --font-label-sm: 'Inter', sans-serif;
+  --font-label-md: 'Inter', sans-serif;
+  --font-code-badge: 'JetBrains Mono', monospace;
+}
+
+/* Custom Spacing & Typography Utilities */
+.px-margin {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.px-margin-mobile {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.gap-space-xs {
+  gap: 0.25rem;
+}
+.gap-space-sm {
+  gap: 0.5rem;
+}
+.gap-space-md {
+  gap: 1rem;
+}
+.gap-space-lg {
+  gap: 1.5rem;
+}
+.gap-space-xl {
+  gap: 2.5rem;
+}
+.px-space-xs {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.px-space-sm {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-space-md {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-space-xs {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.py-space-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-space-md {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.pt-space-xl {
+  padding-top: 2.5rem;
+}
+.pb-space-xl {
+  padding-bottom: 2.5rem;
+}
+.pb-space-lg {
+  padding-bottom: 1.5rem;
+}
+.pl-space-xs {
+  padding-left: 0.25rem;
+}
+
+/* Typography styles matching the design specifications */
+.font-display-hero {
+  font-family: 'Manrope', sans-serif;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .font-display-hero {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -0.025em;
+  }
+}
+.font-headline-lg {
+  font-family: 'Manrope', sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .font-headline-lg {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+  }
+}
+.font-headline-md {
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.font-headline-sm {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.font-editorial-accent {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.font-body-lg {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+}
+.font-body-md {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.005em;
+}
+.font-body-sm {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+.font-code-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+.font-label-md {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.font-label-sm {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+/* Material Symbols configuration */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #bccabf;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6d7a70;
+}
+
+/* Page Transition and Reveal Animations */
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-page-enter {
+  animation: pageEnter 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #ebf6ee 25%, #dfebe3 50%, #ebf6ee 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+

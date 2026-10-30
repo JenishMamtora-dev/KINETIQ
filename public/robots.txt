@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Allow: /freelancers
+Allow: /explore
+Allow: /categories
+Allow: /how-it-works
+Allow: /become-a-freelancer
+Allow: /compare
+Allow: /legal/
+
+# Disallow authenticated, checkout, and admin routes
+Disallow: /client/
+Disallow: /admin/
+Disallow: /onboarding
+Disallow: /verify-email
+Disallow: /403
+
+Sitemap: https://kinetiq.design/sitemap.xml
